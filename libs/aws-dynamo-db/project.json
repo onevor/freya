@@ -4,6 +4,33 @@
   "sourceRoot": "libs/aws-dynamo-db/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/aws-dynamo-db",
+        "main": "libs/aws-dynamo-db/src/index.ts",
+        "tsConfig": "libs/aws-dynamo-db/tsconfig.lib.json"
+      },
+      "dependsOn": ["install"]
+    },
+    "buildFull": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cp -r ./LICENSE ./dist/libs/aws-dynamo-db/LICENSE && cp -r ./libs/aws-dynamo-db/README.md ./dist/libs/aws-dynamo-db/README.md",
+        "cwd": "./"
+      },
+      "dependsOn": ["build"]
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npm publish --access public"],
+        "cwd": "dist/libs/aws-dynamo-db",
+        "parallel": false
+      },
+      "dependsOn": ["buildFull"]
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

@@ -20,5 +20,9 @@
         "{workspaceRoot}/.eslintignore"
       ]
     }
+  },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "libs"
   }
 }
