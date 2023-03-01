@@ -1,8 +1,8 @@
 {
   "name": "@onevor/aws-dynamo-db",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This library was generated with [Nx](https://nx.dev).",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
