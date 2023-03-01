@@ -1,0 +1,20 @@
+{
+  "name": "@onevor/aws-dynamo-db",
+  "version": "0.0.1",
+  "description": "This library was generated with [Nx](https://nx.dev).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AWS",
+    "SDK",
+    "AWS-SDK",
+    "dynamodb",
+    "dynamo",
+    "db",
+    "wrapper"
+  ],
+  "author": "Dennis Lien",
+  "license": "ISC"
+}
